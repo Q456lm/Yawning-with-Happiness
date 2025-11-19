@@ -1,12 +1,24 @@
 // Dragon enemy subclass
  
-// TODO: Extend Enemy
+//Extends Enemy
  
-public class Dragon {
+public class Dragon extends Enemy{
  
-    // TODO: Create constructor (call super)
+    public Dragon(){
+        super(100, 40, "Dragon");
+    }
+    
+    public Dragon(String type){
+        super(100, 40, type+" Dragon");
+    }
  
-    // TODO: Implement update()
+    //Implements update()
+    public void update(){
+        System.out.println(name+ " flys above you.");
+    }
  
-    // TODO: Implement attack()
+    //Implements attack()
+    public void attack(){
+        System.out.println(name+" breathes fire for "+damage+" damage.");
+    }
 }

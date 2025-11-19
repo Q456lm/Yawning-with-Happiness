@@ -1,20 +1,23 @@
 // Driver for the Enemy inheritance lab
- 
+
 public class GameDriver {
  
     public static void main(String[] args) {
  
-        // TODO: Add this commented line to show that Enemy cannot be instantiated:
-        // Enemy e = new Enemy();
+        //Enemy cannot be instantiated:
+        //Enemy e = new Enemy();
  
-        // TODO: Create an Enemy[] array with:
-        // new Slime(...)
-        // new Skeleton(...)
-        // new Dragon(...)
+        //Makes an enemy array with all the diffrent types
+        Enemy[] enemies = {new Slime("Red"), new Skeleton("Angry"), new Dragon("Friendly")};
  
-        // TODO: Loop through the array and call:
-        // update(), attack(), takeDamage()
+        //Loops through each enemy and calls their methods
+        for (Enemy enemy:enemies){
+            System.out.println("\n==="+enemy.getName()+"===");
+            enemy.update();
+            enemy.attack();
+            enemy.takeDamage(((int)(Math.random()*2)+6));
+        }
  
-        // TODO: Add reflection answers as comments at the bottom of this file
+        
     }
 }

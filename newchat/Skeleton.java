@@ -1,12 +1,24 @@
 // Skeleton enemy subclass
  
-// TODO: Extend Enemy
+//Extends Enemy
  
-public class Skeleton {
+public class Skeleton extends Enemy{
  
-    // TODO: Create constructor (call super)
+    public Skeleton(){
+        super(50, 20, "Skeleton");
+    }
+    
+    public Skeleton(String type){
+        super(50, 20, type+" Skeleton");
+    }
  
-    // TODO: Implement update()
+    //Implements update()
+    public void update(){
+        System.out.println(name+ " runs around quickly.");
+    }
  
-    // TODO: Implement attack()
+    //Implements attack()
+    public void attack(){
+        System.out.println(name+" swings its sword at you for "+damage+" damage.");
+    }
 }
